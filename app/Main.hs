@@ -1,6 +1,6 @@
 module Main where
 
-import Lib
+import Mlem.Prelude
 
 main :: IO ()
-main = someFunc
+main = putStrLn "mlem"

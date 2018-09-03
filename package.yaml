@@ -1,48 +1,61 @@
-name:                mlem
-version:             0.1.0.0
-github:              "githubuser/mlem"
-license:             BSD3
-author:              "Author name here"
-maintainer:          "example@example.com"
-copyright:           "2018 Author name here"
-
+library:
+  source-dirs: src
+  ghc-options:
+  - -Wall
+tests:
+  mlem-test:
+    source-dirs: test
+    main: Spec.hs
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    - -Wall
+    dependencies:
+    - mlem
+copyright: 2018 Author name here
+maintainer: root@gws.fyi
+dependencies:
+- mtl
+- constraints
+- base >= 4.7 && < 5
+- lens
+- classy-prelude
+- constraints
+default-extensions:
+- NoImplicitPrelude
+- OverloadedStrings
+- GADTSyntax
+- TypeFamilies
+- FlexibleInstances
+- FlexibleContexts
+- FunctionalDependencies
+- DataKinds
+- PolyKinds
+- TypeOperators
+- TypeApplications
+- ScopedTypeVariables
+- DerivingStrategies
+- GeneralizedNewtypeDeriving
+- DeriveAnyClass
+- DeriveGeneric
+name: mlem
+version: 0.1.0.0
 extra-source-files:
 - README.md
 - ChangeLog.md
-
-# Metadata used when publishing your package
-# synopsis:            Short description of your package
-# category:            Web
-
-# To avoid duplicated efforts in documentation and dealing with the
-# complications of embedding Haddock markup inside cabal files, it is
-# common to point users to the README.md file.
-description:         Please see the README on GitHub at <https://github.com/githubuser/mlem#readme>
-
-dependencies:
-- base >= 4.7 && < 5
-
-library:
-  source-dirs: src
-
+author: Author name here
+github: githubuser/mlem
+license: BSD3
 executables:
   mlem-exe:
-    main:                Main.hs
-    source-dirs:         app
+    source-dirs: app
+    main: Main.hs
     ghc-options:
     - -threaded
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
     - mlem
-
-tests:
-  mlem-test:
-    main:                Spec.hs
-    source-dirs:         test
-    ghc-options:
-    - -threaded
-    - -rtsopts
-    - -with-rtsopts=-N
-    dependencies:
-    - mlem
+description: Please see the README on GitHub at <https://github.com/githubuser/mlem#readme>
+description: Please see the README on GitHub at <https://github.com/githubuser/mlem#readme>
