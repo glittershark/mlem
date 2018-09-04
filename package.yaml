@@ -13,6 +13,11 @@ tests:
     - -Wall
     dependencies:
     - mlem
+    - tasty
+    - tasty-hunit
+    - tasty-quickcheck
+    - hspec
+    - hedgehog
 copyright: 2018 Author name here
 maintainer: root@gws.fyi
 dependencies:
@@ -22,23 +27,28 @@ dependencies:
 - lens
 - classy-prelude
 - constraints
+- QuickCheck
 default-extensions:
-- NoImplicitPrelude
-- OverloadedStrings
-- GADTSyntax
-- TypeFamilies
-- FlexibleInstances
-- FlexibleContexts
-- FunctionalDependencies
+- ConstraintKinds
 - DataKinds
-- PolyKinds
-- TypeOperators
-- TypeApplications
-- ScopedTypeVariables
-- DerivingStrategies
-- GeneralizedNewtypeDeriving
 - DeriveAnyClass
 - DeriveGeneric
+- DerivingStrategies
+- FlexibleContexts
+- FlexibleInstances
+- FunctionalDependencies
+- GADTSyntax
+- GeneralizedNewtypeDeriving
+- KindSignatures
+- LambdaCase
+- NoImplicitPrelude
+- OverloadedStrings
+- PolyKinds
+- RankNTypes
+- ScopedTypeVariables
+- TypeApplications
+- TypeFamilies
+- TypeOperators
 name: mlem
 version: 0.1.0.0
 extra-source-files:

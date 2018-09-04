@@ -6,7 +6,6 @@
 module Mlem.Data.Vec
   ( Vec(..)
   , replicate
-  , toList
   ) where
 --------------------------------------------------------------------------------
 import Mlem.Prelude hiding
@@ -37,7 +36,7 @@ instance Functor (Vec n) where
 class Replicate' (n :: Nat) (n' :: Peano) where
   replicate' :: a -> Vec n a
 
-instance Replicate' 0 'Z where
+instance Replicate' 0 Z where
   replicate' _ = VNil
 
 instance (Replicate' n n', m ~ (n + 1)) => Replicate' m ('S n') where
